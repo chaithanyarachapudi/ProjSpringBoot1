@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -155,7 +157,7 @@ footer {
 		<button onclick="filterStates()" class="btn btn-primary">Search</button>
 		<button onclick="resetFilter()" class="btn btn-primary">Reset</button>
 	</div>
-	<button onclick="window.location.href='/explore-content.html'" class="btn btn-primary">Back</button>
+	<button onclick="window.location.href='/explore-content'" class="btn btn-primary">Back</button>
 </header>
 
 	

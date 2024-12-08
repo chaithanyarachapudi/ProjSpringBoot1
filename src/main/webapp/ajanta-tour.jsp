@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +60,7 @@ iframe {
 <body>
 
 	<!-- Back Button -->
-	<a href="virtual-tour.html" class="back-button">Back to Virtual
+	<a href="virtual-tour" class="back-button">Back to Virtual
 		Tours</a>
 
 	<a-scene> <a-assets> <!-- Update the src attribute with the URL of p04.jpg -->

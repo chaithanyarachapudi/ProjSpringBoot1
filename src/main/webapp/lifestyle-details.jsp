@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +100,7 @@ footer {
         <h1>Discover the Indian Lifestyle</h1>
         <p>Explore the rich tapestry of culture, traditions, and daily life across different states of India.</p>
     </div>
-    <button onclick="window.location.href='/explore-content.html'" class="btn btn-primary">
+    <button onclick="window.location.href='/explore-content'" class="btn btn-primary">
         Back
     </button>
 </header>

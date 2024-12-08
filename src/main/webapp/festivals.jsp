@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +105,7 @@ footer {
 		<p>Experience the joy and cultural significance of India's
 			numerous festivals.</p>
 	</header>
-	<button onclick="window.location.href='/explore-content.html'"
+	<button onclick="window.location.href='/explore-content'"
 		class="card-btn">Back</button>
 	<main class="container mt-4">
 		<section>

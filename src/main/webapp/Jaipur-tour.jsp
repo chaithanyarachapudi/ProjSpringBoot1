@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +43,7 @@ body {
 .map-container {
 	position: absolute;
 	bottom: 20px;
-	left: 20px;
+	left: 20px; /* Positioned on the left now */
 	width: 600px;
 	height: 450px;
 	z-index: 50;
@@ -58,13 +60,12 @@ iframe {
 <body>
 
 	<!-- Back Button -->
-	<a href="virtual-tour.html" class="back-button">Back to Virtual
+	<a href="virtual-tour" class="back-button">Back to Virtual
 		Tours</a>
 
-	<!-- A-Frame scene -->
-	<a-scene> <a-assets> <!-- Update the src attribute with the URL of the image -->
+	<a-scene> <a-assets> <!-- Update the src attribute with the URL of p04.jpg -->
 	<img id="city" crossorigin="anonymous"
-		src="templates/static/images/delhi.jpg"> </a-assets> <!-- 360-degree image. -->
+		src="templates/static/images/jaipur.jpg"> </a-assets> <!-- 360-degree image. -->
 	<a-sky id="image-360" radius="10" src="#city"
 		animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
 		animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"></a-sky>
@@ -76,14 +77,11 @@ iframe {
 		event-set__mouseenter="_event: mouseenter; color: springgreen"
 		event-set__mouseleave="_event: mouseleave; color: black"
 		raycaster="objects: .link"></a-cursor> </a-entity> </a-scene>
-
-	<!-- Google Map -->
 	<div class="map-container">
 		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.52629668376!2d76.76357783356833!3d28.643684634738104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1728364493135!5m2!1sen!2sin"
-			allowfullscreen="" loading="lazy"
-			referrerpolicy="no-referrer-when-downgrade"></iframe>
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7310703.113775858!2d68.58535286710905!3d26.530438253355204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396a3efaf7e30e37%3A0xb52b9b4506c088e5!2sRajasthan!5e0!3m2!1sen!2sin!4v1728365076229!5m2!1sen!2sin"
+			width="600" height="450" style="border: 0;" allowfullscreen=""
+			loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
-
 </body>
 </html>

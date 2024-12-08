@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -186,7 +188,7 @@ body {
 
             <div class="register-link">
                 <p>
-                    Don't have an account? <br> <a href="/SignUp.html">Register</a>
+                    Don't have an account? <br> <a href="/SignUp">Register</a>
                 </p>
             </div>
 
@@ -226,13 +228,13 @@ body {
         if (response === "Authorized User") {
             // Check if the credentials match admin
             if (username === "admin" && password === "chaithu") {
-                window.location.href = "/admin-dashboard.html";
+                window.location.href = "/admin-dashboard";
             } else {
-                window.location.href = "/visitor-dashboard.html";
+                window.location.href = "/visitor-dashboard";
             }
         } else {
             alert("Unauthorized User");
-            window.location.href = "/SignIn.html";
+            window.location.href = "/SignIn";
         }
     }
 

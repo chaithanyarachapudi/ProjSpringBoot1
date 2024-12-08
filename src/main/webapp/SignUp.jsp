@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -150,7 +152,7 @@ body {
 
         <div class="register-link">
             <p>
-                Already have an account? <br> <a href="/SignIn.html">Login</a>
+                Already have an account? <br> <a href="/SignIn">Login</a>
             </p>
         </div>
 
@@ -187,7 +189,7 @@ function register() {
 function handleRegisterResponse(response) {
     if (response === "Registration Successful. Please verify your email.") {
         alert(response);
-        window.location.href = "/SignIn.html"; // Redirect after message
+        window.location.href = "/SignIn"; // Redirect after message
     } else {
         alert(response); // Display any errors
     }

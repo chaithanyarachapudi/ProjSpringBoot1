@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,12 +60,12 @@ iframe {
 <body>
 
 	<!-- Back Button -->
-	<a href="virtual-tour.html" class="back-button">Back to Virtual
+	<a href="virtual-tour" class="back-button">Back to Virtual
 		Tours</a>
 
 	<a-scene> <a-assets> <!-- Update the src attribute with the URL of p04.jpg -->
 	<img id="city" crossorigin="anonymous"
-		src="templates/static/images/goa.jpg"> </a-assets> <!-- 360-degree image. -->
+		src="templates/static/images/hampi.jpg"> </a-assets> <!-- 360-degree image. -->
 	<a-sky id="image-360" radius="10" src="#city"
 		animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
 		animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"></a-sky>
@@ -77,10 +79,9 @@ iframe {
 		raycaster="objects: .link"></a-cursor> </a-entity> </a-scene>
 	<div class="map-container">
 		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984962.9467283923!2d73.34722614574983!3d15.348759664324652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfba106336b741%3A0xeaf887ff62f34092!2sGoa!5e0!3m2!1sen!2sin!4v1728364997916!5m2!1sen!2sin"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945976.5912275873!2d73.67892895735724!3d15.020836621445019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4c37bf488f%3A0x41f1d28cd1757cd5!2sKarnataka!5e0!3m2!1sen!2sin!4v1728365348544!5m2!1sen!2sin"
 			width="600" height="450" style="border: 0;" allowfullscreen=""
 			loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
-
 </body>
 </html>

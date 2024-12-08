@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,13 +147,13 @@ body {
 			<div class="card" id="manageContent">
 				<h3>Manage Content</h3>
 				<p>Create, edit, or delete articles and resources about Indian culture and heritage.</p>
-				<button class="btn" onclick="window.location.href='manage-content.html';">Go to Content Management</button>
+				<button class="btn" onclick="window.location.href='manage-content';">Go to Content Management</button>
 			</div>
 
 			<div class="card" id="userManagement">
 				<h3>User Management</h3>
 				<p>View and manage user roles, permissions, and activities.</p>
-				<button class="btn" onclick="window.location.href='user-management.html';">Manage Users</button>
+				<button class="btn" onclick="window.location.href='user-management';">Manage Users</button>
 			</div>
 
 			

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,59 +91,59 @@ body {
 	<!-- Navbar with heading and Back to Dashboard button in the same row -->
 	<div class="navbar">
 		<h1>Virtual Tour of Historical Places</h1>
-		<a href="visitor-dashboard.html">Back to Dashboard</a>
+		<a href="visitor-dashboard">Back to Dashboard</a>
 	</div>
 
 	<div class="container">
 		<div class="card">
 			<h3>Uttar Pradesh</h3>
 			<p>A symbol of love and one of the Seven Wonders of the World.</p>
-			<a href="tajmahal-tour.html" class="btn">View Tour</a>
+			<a href="tajmahal-tour" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Delhi</h3>
 			<p>The Lotus Temple is a Baháʼí House of Worship located in New
 				Delhi, India. It was completed in December 1986.</p>
-			<a href="delhi-tour.html" class="btn">View Tour</a>
+			<a href="delhi-tour" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Goa</h3>
 			<p>Known for its ruins and stunning architecture.</p>
-			<a href="goa-tour.html" class="btn">View Tour</a>
+			<a href="goa-tour" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Rajasthan</h3>
 			<p>Rajasthan, also known as the “Land of Kings,” is India's
 				largest state in terms of area.</p>
-			<a href="Jaipur-tour.html" class="btn">View Tour</a>
+			<a href="Jaipur-tour" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Hyderabad</h3>
 			<p>Known for its rich history and architecture, including the
 				Charminar.</p>
-			<a href="hyderabad.html" class="btn">View Tour</a>
+			<a href="hyderabad" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Maharashtra</h3>
 			<p>Famous for rock-cut Buddhist caves and stunning frescoes.</p>
-			<a href="ajanta-tour.html" class="btn">View Tour</a>
+			<a href="ajanta-tour" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Madhya Pradesh</h3>
 			<p>Renowned for its intricate temples with erotic sculptures.</p>
-			<a href="khajuraho.html" class="btn">View Tour</a>
+			<a href="khajuraho" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Karnataka</h3>
 			<p>Hampi, a UNESCO World Heritage site known for its ancient
 				temples and ruins.</p>
-			<a href="hampi-tour.html" class="btn">View Tour</a>
+			<a href="hampi-tour" class="btn">View Tour</a>
 		</div>
 		<div class="card">
 			<h3>Andhra Pradesh</h3>
 			<p>Tirupati, a UNESCO World Heritage site known for its ancient
 				temples and ruins.</p>
-			<a href="tirupati-tour.html" class="btn">View Tour</a>
+			<a href="tirupati-tour" class="btn">View Tour</a>
 		</div>
 	</div>
 

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,7 +165,7 @@ body {
 				<p>Discover articles, videos, and information about Indian
 					culture and heritage.</p>
 				<button class="btn"
-					onclick="window.location.href='explore-content.html';">View
+					onclick="window.location.href='explore-content';">View
 					Content</button>
 			</div>
 
@@ -173,7 +175,7 @@ body {
 				<p>Join guided tours to explore famous historical sites
 					virtually.</p>
 				<button class="btn"
-					onclick="window.location.href='virtual-tour.html';">Join a
+					onclick="window.location.href='virtual-tour';">Join a
 					Virtual Tour</button>
 			</div>
 
@@ -201,7 +203,7 @@ body {
 			        <!-- Submit Button -->
 			        <button class="btn" onclick="submitComment()">Submit</button>
 			    </div>
-			    <button class="btn" onclick="window.location.href='/reviews.html'">Reviews</button>
+			    <button class="btn" onclick="window.location.href='/reviews'">Reviews</button>
 			</div>
 		</div>
 	</div>

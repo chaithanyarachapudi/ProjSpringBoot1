@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,7 +118,7 @@ header {
 		<h1>Holy Books of Indian Spiritual Traditions</h1>
 	</header>
 	<!-- Back Button -->
-	<button onclick="window.location.href='/explore-content.html'"
+	<button onclick="window.location.href='/explore-content'"
 		class="card-btn">Back</button>
 	<section class="cards-container">
 

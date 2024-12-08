@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,45 +112,45 @@ body {
 			<h4>Beautiful Tourism Places</h4>
 			<p>Discover India’s most iconic tourist destinations like Taj
 				Mahal, Jaipur’s forts, and more!</p>
-			<a href="tourism.html" class="btn">Explore</a>
+			<a href="tourism" class="btn">Explore</a>
 		</div>
 
 		<div class="card" onclick="fetchContent('food')">
 			<h4>Food of India</h4>
 			<p>Explore the diverse and delicious cuisines of India, from
 				street food to royal feasts.</p>
-			<a href="food.html" class="btn">Explore</a>
+			<a href="food" class="btn">Explore</a>
 		</div>
 
 		<div class="card" onclick="fetchContent('lifestyle-details')">
 			<h4>Indian Lifestyle</h4>
 			<p>Learn about the vibrant and dynamic lifestyles across
 				different states of India.</p>
-			<a href="lifestyle-details.html" class="btn">Explore</a>
+			<a href="lifestyle-details" class="btn">Explore</a>
 		</div>
 
 		<div class="card" onclick="fetchContent('traditions')">
 			<h4>Spirituals Of India</h4>
 			<p>Dive into India’s rich traditions, cultural practices, and
 				diverse heritage.</p>
-			<a href="traditions.html" class="btn">Explore</a>
+			<a href="traditions" class="btn">Explore</a>
 		</div>
 
 		<div class="card" onclick="fetchContent('festivals')">
 			<h4>Festivals of India</h4>
 			<p>Experience the joy and cultural significance of India's
 				numerous festivals.</p>
-			<a href="festivals.html" class="btn">Explore</a>
+			<a href="festivals" class="btn">Explore</a>
 		</div>
 
 		<div class="card" onclick="fetchContent('arts')">
 			<h4>Indian Arts and Crafts</h4>
 			<p>Uncover the exquisite arts and handicrafts that have been an
 				integral part of Indian culture.</p>
-			<a href="arts.html" class="btn">Explore</a>
+			<a href="arts" class="btn">Explore</a>
 		</div>
 	</div>
-	<button onclick="window.location.href='/visitor-dashboard.html'"
+	<button onclick="window.location.href='/visitor-dashboard'"
 		class="card-btn">Back</button>
 </body>
 </html>
@@ -167,7 +169,7 @@ function fetchContent(category) {
     .then(data => {
         console.log("API response data:", data);
         localStorage.setItem('apiData', JSON.stringify(data));
-        window.location.href = `${category}.html`;
+        window.location.href = `${category}`;
     })
     .catch(error => {
         console.error('Error fetching data:', error);

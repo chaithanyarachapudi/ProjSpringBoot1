@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +43,7 @@ body {
 .map-container {
 	position: absolute;
 	bottom: 20px;
-	left: 20px; /* Positioned on the left now */
+	left: 20px;
 	width: 600px;
 	height: 450px;
 	z-index: 50;
@@ -58,13 +60,13 @@ iframe {
 <body>
 
 	<!-- Back Button -->
-	<a href="virtual-tour.html" class="back-button">Back to Virtual
+	<a href="virtual-tour" class="back-button">Back to Virtual
 		Tours</a>
 
 	<!-- A-Frame scene -->
 	<a-scene> <a-assets> <!-- Update the src attribute with the URL of the image -->
 	<img id="city" crossorigin="anonymous"
-		src="templates/static/images/p04.jpg"> </a-assets> <!-- 360-degree image. -->
+		src="templates/static/images/delhi.jpg"> </a-assets> <!-- 360-degree image. -->
 	<a-sky id="image-360" radius="10" src="#city"
 		animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
 		animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"></a-sky>
@@ -77,10 +79,10 @@ iframe {
 		event-set__mouseleave="_event: mouseleave; color: black"
 		raycaster="objects: .link"></a-cursor> </a-entity> </a-scene>
 
-	<!-- Google Map for Uttar Pradesh -->
+	<!-- Google Map -->
 	<div class="map-container">
 		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7278023.055249913!2d75.5665473507182!3d27.03894299949832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39994e9f7b4a09d3%3A0xf6a5476d3617249d!2sUttar%20Pradesh!5e0!3m2!1sen!2sin!4v1728364708010!5m2!1sen!2sin"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.52629668376!2d76.76357783356833!3d28.643684634738104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1728364493135!5m2!1sen!2sin"
 			allowfullscreen="" loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>

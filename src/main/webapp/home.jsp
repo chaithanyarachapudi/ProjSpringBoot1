@@ -118,9 +118,9 @@ h1 {
 					<li class="nav-item"><a class="nav-link text-light"
 						href="#home">Home</a></li>
 					<li class="nav-item"><a class="nav-link text-light"
-						href="/SignIn.html">Sign In</a></li>
+						href="/SignIn">Sign In</a></li>
 					<li class="nav-item"><a class="nav-link text-light"
-						href="/SignUp.html">Sign Up</a></li>
+						href="/SignUp">Sign Up</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -138,7 +138,7 @@ h1 {
 
 		<!-- Start Your Journey Button -->
 		<button class="center-button"
-			onclick="window.location.href='/SignIn.html'">Start Your
+			onclick="window.location.href='/SignIn'">Start Your
 			Journey</button>
 
 		<div class="content">
