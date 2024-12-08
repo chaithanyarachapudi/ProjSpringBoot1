@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourism in India</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-image:
+		url('https://tse3.mm.bing.net/th?id=OIP.NSR8vvQz97JZTn1rYjpQqQHaFj&pid=Api&P=0&h=180');
+	/* Replace with your image */
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+}
+
+header {
+    padding: 2rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.5);
+}
+
+h1 {
+    color: #ff77a3;
+}
+
+h2 {
+	font-size: 1.8rem;
+	color: #ffeb3b; /* Bright yellow for state names */
+}
+
+main {
+	display: flex;
+	flex-direction: column; /* Arrange in a single column */
+	align-items: center; /* Center items */
+	margin: 20px;
+}
+
+.state {
+	width: 80%; /* Make card responsive */
+	max-width: 1000px; /* Max width for large screens */
+	height: auto; /* Allow height to adjust based on content */
+	position: relative;
+	background: #111; /* Dark background for contrast */
+	margin: 15px 0; /* Vertical margin */
+	border-radius: 10px;
+	display: flex; /* Flex layout for content and image */
+	overflow: hidden;
+}
+
+.moving-border {
+	position: relative;
+	padding: 4px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.moving-border::before, .moving-border::after {
+	content: "";
+	position: absolute;
+	inset: -0.2rem; /* Adjusts the size of the border */
+	z-index: -1;
+	background: linear-gradient(var(--angle), #ff0080, #ff77a3, #ff0000);
+	/* Gradient from pink to red */
+	animation: rotate 10s linear infinite;
+}
+
+.moving-border::after {
+	filter: blur(10px);
+}
+
+.image {
+	flex: 1; /* Allow image div to take full height */
+	display: flex;
+	justify-content: center; /* Center image */
+	align-items: center;
+}
+
+.image img {
+	width: 100%; /* Make images responsive */
+	border-radius: 10px; /* Rounded corners for images */
+}
+
+.details {
+	flex: 1; /* Allow details to take full height */
+	padding: 15px;
+	text-align: left;
+	color: #fff; /* White text for better readability */
+}
+
+.reverse {
+	flex-direction: row-reverse; /* Reverse order for alternating layout */
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	padding: 5px 0;
+	color: #ffeb3b; /* Bright yellow text for list items */
+	transition: color 0.3s; /* Animation */
+}
+
+.state:hover li {
+	color: #ff77a3; /* Change text color to light pink on hover */
+}
+
+footer {
+	text-align: center;
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.5);
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+.card-btn {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #3498db;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.card-btn:hover {
+	background-color: #2980b9;
+}
+</style>
+</head>
+<body>
+	<header class="text-center d-flex align-items-center justify-content-between">
+	<div>
+		<h1>Explore the Tourist Spots of India</h1>
+		<p>Discover the beauty of India's diverse states and their attractions.</p>
+	</div>
+	<div class="search-container">
+		<input type="text" id="stateSearch" placeholder="Search for a state...">
+		<button onclick="filterStates()" class="btn btn-primary">Search</button>
+		<button onclick="resetFilter()" class="btn btn-primary">Reset</button>
+	</div>
+	<button onclick="window.location.href='/explore-content.html'" class="btn btn-primary">Back</button>
+</header>
+
+	
+	<main>
+		<section class="state moving-border">
+
+
+			<div class="image">
+				<img
+					src="https://tse4.mm.bing.net/th?id=OIP.ZQmLn8PEzLirfZFAxvEpbgHaE8&pid=Api&P=0&h=180"
+					alt="Maharashtra" />
+			</div>
+			<div class="details" data-state="Maharastra">
+				<h2>Maharashtra</h2>
+				<ul>
+					<li>Gateway of India, Mumbai</li>
+					<li>Ajanta and Ellora Caves</li>
+					<li>Marine Drive, Mumbai</li>
+					<li>Mahabaleshwar Hill Station</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/rajestan.jpeg" alt="Rajasthan" />
+			</div>
+			<div class="details" data-state="Rajasthan">
+				<h2>Rajasthan</h2>
+				<ul>
+					<li>Amber Fort, Jaipur</li>
+					<li>City Palace, Udaipur</li>
+					<li>Jaisalmer Fort</li>
+					<li>Pushkar Camel Fair</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/kerala.jpeg" alt="Kerala" />
+			</div>
+			<div class="details" data-state="Kerala">
+				<h2>Kerala</h2>
+				<ul>
+					<li>Backwaters of Alleppey</li>
+					<li>Munnar Tea Gardens</li>
+					<li>Fort Kochi</li>
+					<li>Thekkady Wildlife Sanctuary</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/westbengal.jpg" alt="West Bengal" />
+			</div>
+			<div class="details" data-state="West Bengal">
+				<h2>West Bengal</h2>
+				<ul>
+					<li>Victoria Memorial, Kolkata</li>
+					<li>Sundarbans National Park</li>
+					<li>Darjeeling Tea Gardens</li>
+					<li>Kalimpong Hill Station</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/tamilnadu.jpeg" alt="Tamil Nadu" />
+			</div>
+			<div class="details" data-state="Tamil Nadu">
+				<h2>Tamil Nadu</h2>
+				<ul>
+					<li>Meenakshi Temple, Madurai</li>
+					<li>Marina Beach, Chennai</li>
+					<li>Ooty Hill Station</li>
+					<li>Kanyakumari</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/karnataka.jpeg" alt="Karnataka" />
+			</div>
+			<div class="details" data-state="Karnataka">
+				<h2>Karnataka</h2>
+				<ul>
+					<li>Hampi</li>
+					<li>Mysore Palace</li>
+					<li>Coorg</li>
+					<li>Badami Caves</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/gujarat.png" alt="Gujarat" />
+			</div>
+			<div class="details" data-state="Gujarat">
+				<h2>Gujarat</h2>
+				<ul>
+					<li>Gir National Park</li>
+					<li>Rann of Kutch</li>
+					<li>Sabarmati Ashram</li>
+					<li>Somnath Temple</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/p04.jpg" alt="Uttar Pradesh" />
+			</div>
+			<div class="details" data-state="Uttar Pradesh">
+				<h2>Uttar Pradesh</h2>
+				<ul>
+					<li>Taj Mahal, Agra</li>
+					<li>Varanasi Ghats</li>
+					<li>Fatehpur Sikri</li>
+					<li>Ajmer Sharif Dargah</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/jaipur.jpg" alt="Odisha" />
+			</div>
+			<div class="details" data-state="Odisha">
+				<h2>Odisha</h2>
+				<ul>
+					<li>Jagannath Temple, Puri</li>
+					<li>Konark Sun Temple</li>
+					<li>Chilika Lake</li>
+					<li>Udayagiri and Khandagiri Caves</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse1.mm.bing.net/th?id=OIP.jIvxN41BAejoa2VHEBWoiwHaEK&pid=Api&P=0&h=180"
+					alt="Punjab" />
+			</div>
+			<div class="details" data-state="Punjab">
+				<h2>Punjab</h2>
+				<ul>
+					<li>Golden Temple, Amritsar</li>
+					<li>Wagah Border Ceremony</li>
+					<li>Jallianwala Bagh</li>
+					<li>Patiala Palace</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/hampi.jpg" alt="Haryana" />
+			</div>
+			<div class="details" data-state="Haryana">
+				<h2>Haryana</h2>
+				<ul>
+					<li>Kingdom of Dreams, Gurugram</li>
+					<li>Sohna Hot Springs</li>
+					<li>Shirdi Sai Baba Temple</li>
+					<li>Kurukshetra</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse4.mm.bing.net/th?id=OIP.M56dceTnjALvQ_1qG3LVOgHaE8&pid=Api&P=0&h=180"
+					alt="Chhattisgarh" />
+			</div>
+			<div class="details" data-state="Chattisgarh">
+				<h2>Chattisgarh</h2>
+				<ul>
+					<li>Bastar Dussehra</li>
+					<li>Kanger Valley National Park</li>
+					<li>Chitrakote Waterfall</li>
+					<li>Sirpur</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/khajuraho.jpg" alt="Jharkhand" />
+			</div>
+			<div class="details" data-state="Jharkhand">
+				<h2>Jharkhand</h2>
+				<ul>
+					<li>Netarhat</li>
+					<li>Hazaribagh National Park</li>
+					<li>Dalma Wildlife Sanctuary</li>
+					<li>Deer Park, Hazaribagh</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/jaipur.jpg" alt="Bihar" />
+			</div>
+			<div class="details" data-state="Bihar">
+				<h2>Bihar</h2>
+				<ul>
+					<li>Bodh Gaya</li>
+					<li>Nalanda University</li>
+					<li>Patna Museum</li>
+					<li>Mahabodhi Temple</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse1.mm.bing.net/th?id=OIP.VkjDzJwVUFFY_a5y11XpYQHaE2&pid=Api&P=0&h=180"
+					alt="Assam" />
+			</div>
+			<div class="details" data-state="Assam">
+				<h2>Assam</h2>
+				<ul>
+					<li>Kaziranga National Park</li>
+					<li>Majuli Island</li>
+					<li>Tea Gardens</li>
+					<li>Kamakhya Temple</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/goa.jpg" alt="Meghalaya" />
+			</div>
+			<div class="details" data-state="Meghalaya">
+				<h2>Meghalaya</h2>
+				<ul>
+					<li>Living Root Bridges</li>
+					<li>Cherrapunji</li>
+					<li>Nohkalikai Falls</li>
+					<li>Mawlynnong Village</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://up.yimg.com/ib/th?id=OIP.rUQcGvzZ_xcUQEo1ogKWVQHaE8&pid=Api&rs=1&c=1&qlt=95&w=145&h=97"
+					alt="Manipur" />
+			</div>
+			<div class="details" data-state="Manipur">
+				<h2>Manipur</h2>
+				<ul>
+					<li>Loktak Lake</li>
+					<li>Imphal</li>
+					<li>Khonghampat Orchidarium</li>
+					<li>Shree Govindajee Temple</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse4.mm.bing.net/th?id=OIP.ZozG3O3BMR0s6ouov9Ri4QHaE0&pid=Api&P=0&h=180"
+					alt="Nagaland" />
+			</div>
+			<div class="details" data-state="Nagaland">
+				<h2>Nagaland</h2>
+				<ul>
+					<li>Kohima War Cemetery</li>
+					<li>Hornbill Festival</li>
+					<li>Dimapur Ruins</li>
+					<li>Dzukou Valley</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse2.mm.bing.net/th?id=OIP.OXjCJXBQGCRpjnrsAGnY7QHaEn&pid=Api&P=0&h=180"
+					alt="Sikkim" />
+			</div>
+			<div class="details" data-state="Gangtok">
+				<h2>Sikkim</h2>
+				<ul>
+					<li>Gangtok</li>
+					<li>Tsomgo Lake</li>
+					<li>North Sikkim</li>
+					<li>Pelling</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse4.mm.bing.net/th?id=OIP.Cs8AXeZpBZWZFCFcq2b-PgHaE9&pid=Api&P=0&h=180"
+					alt="Telangana" />
+			</div>
+			<div class="details" data-state="Telangana">
+				<h2>Telangana</h2>
+				<ul>
+					<li>Hyderabad</li>
+					<li>Golconda Fort</li>
+					<li>Charminar</li>
+					<li>Ramoji Film City</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img src="templates/static/images/tirupati.jpg" alt="Andhra Pradesh" />
+			</div>
+			<div class="details" data-state="Andhra pradesh">
+				<h2>Andhra Pradesh</h2>
+				<ul>
+					<li>Visakhapatnam</li>
+					<li>Tirupati Balaji Temple</li>
+					<li>Hampi</li>
+					<li>Pulicat Lake</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse4.mm.bing.net/th?id=OIP.l4AZwQSWlJuiDt4XCRHUQAHaE6&pid=Api&P=0&h=180"
+					alt="Uttarakhand" />
+			</div>
+			<div class="details" data-state="Uttarakhand">
+				<h2>Uttarakhand</h2>
+				<ul>
+					<li>Haridwar</li>
+					<li>Rishikesh</li>
+					<li>Jim Corbett National Park</li>
+					<li>Auli</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse2.mm.bing.net/th?id=OIP.yPPRgyeUC8UvdJU3CuD7AAHaEK&pid=Api&P=0&h=180"
+					alt="Jammu and Kashmir" />
+			</div>
+			<div class="details" data-state="Jammu kashmir">
+				<h2>Jammu and Kashmir</h2>
+				<ul>
+					<li>Srinagar</li>
+					<li>Gulmarg</li>
+					<li>Pahalgam</li>
+					<li>Sonamarg</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse4.mm.bing.net/th?id=OIP.g_eF275_AKK2GyzyQjs7QwHaCd&pid=Api&P=0&h=180"
+					alt="Lakshadweep" />
+			</div>
+			<div class="details" data-state="Lakshadweep">
+				<h2>Lakshadweep</h2>
+				<ul>
+					<li>Bangaram Island</li>
+					<li>Agatti Island</li>
+					<li>Minicoy Island</li>
+					<li>Kavaratti</li>
+				</ul>
+			</div>
+		</section>
+		<section class="state">
+			<div class="image">
+				<img
+					src="https://tse2.mm.bing.net/th?id=OIP.tE6LOL3uys-RVqt1XgF7vgHaEK&pid=Api&P=0&h=180"
+					alt="Andaman and Nicobar" />
+			</div>
+			<div class="details" data-state="adaman nicobar">
+				<h2>Andaman and Nicobar Islands</h2>
+				<ul>
+					<li>Havelock Island</li>
+					<li>Cellular Jail, Port Blair</li>
+					<li>Neil Island</li>
+					<li>Radhanagar Beach</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2024 Explore India. All rights reserved.</p>
+	</footer>
+</body>
+<script>
+function filterStates() {
+    let query = document.getElementById('stateSearch').value.toLowerCase();
+    let cards = document.querySelectorAll('.details');
+    let found = false;
+    
+    cards.forEach(card => {
+        let stateName = card.dataset.state.toLowerCase();
+        if (stateName.includes(query)) {
+            card.parentElement.style.display = 'flex';
+            found = true;
+        } else {
+            card.parentElement.style.display = 'none';
+        }
+    });
+
+    if (!found) {
+        alert('No matching state found.');
+    }
+}
+function resetFilter() {
+    document.getElementById('stateSearch').value = '';
+    document.querySelectorAll('.state').forEach(card => {
+        card.style.display = 'flex';
+    });
+}
+
+    </script>
+</html>
