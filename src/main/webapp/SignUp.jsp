@@ -152,7 +152,7 @@ body {
 
         <div class="register-link">
             <p>
-                Already have an account? <br> <a href="/SignIn">Login</a>
+                Already have an account? <br> <a href="/SignIn.jsp">Login</a>
             </p>
         </div>
 
@@ -187,9 +187,10 @@ function register() {
 }
 
 function handleRegisterResponse(response) {
-    if (response === "Registration Successful. Please verify your email.") {
+    if (response === "1") {
+    	window.location.href = "/SignIn.jsp";
         alert(response);
-        window.location.href = "/SignIn"; // Redirect after message
+         // Redirect after message
     } else {
         alert(response); // Display any errors
     }

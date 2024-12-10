@@ -188,7 +188,7 @@ body {
 
             <div class="register-link">
                 <p>
-                    Don't have an account? <br> <a href="/SignUp">Register</a>
+                    Don't have an account? <br> <a href="/SignUp.jsp">Register</a>
                 </p>
             </div>
 
@@ -228,13 +228,13 @@ body {
         if (response === "Authorized User") {
             // Check if the credentials match admin
             if (username === "admin" && password === "chaithu") {
-                window.location.href = "/admin-dashboard";
+                window.location.href = "/admin-dashboard.jsp";
             } else {
-                window.location.href = "/visitor-dashboard";
+                window.location.href = "/visitor-dashboard.jsp";
             }
         } else {
             alert("Unauthorized User");
-            window.location.href = "/SignIn";
+            window.location.href = "/SignIn.jsp";
         }
     }
 
