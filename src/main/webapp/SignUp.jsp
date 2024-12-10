@@ -188,8 +188,9 @@ function register() {
 
 function handleRegisterResponse(response) {
     if (response === "1") {
+    	alert(response);
     	window.location.href = "/SignIn.jsp";
-        alert(response);
+        
          // Redirect after message
     } else {
         alert(response); // Display any errors
