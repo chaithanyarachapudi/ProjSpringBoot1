@@ -135,10 +135,10 @@ body {
 	<div class="container">
 		<div class="sidebar">
 			<h2>Admin Menu</h2>
-			<a href="/manage-content.html">Manage Content</a>
-			<a href="/user-management.html">User Management</a>
+			<a href="/manage-content.jsp">Manage Content</a>
+			<a href="/user-management.jsp">User Management</a>
 			<a href="#reviewDiscussions">Review Discussions</a>
-			<a href="/home.html">Logout</a>
+			<a href="/home.jsp">Logout</a>
 		</div>
 
 		<div class="content">
@@ -147,13 +147,13 @@ body {
 			<div class="card" id="manageContent">
 				<h3>Manage Content</h3>
 				<p>Create, edit, or delete articles and resources about Indian culture and heritage.</p>
-				<button class="btn" onclick="window.location.href='manage-content';">Go to Content Management</button>
+				<button class="btn" onclick="window.location.href='manage-content.jsp';">Go to Content Management</button>
 			</div>
 
 			<div class="card" id="userManagement">
 				<h3>User Management</h3>
 				<p>View and manage user roles, permissions, and activities.</p>
-				<button class="btn" onclick="window.location.href='user-management';">Manage Users</button>
+				<button class="btn" onclick="window.location.href='user-management.jsp';">Manage Users</button>
 			</div>
 
 			

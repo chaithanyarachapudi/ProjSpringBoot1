@@ -103,7 +103,7 @@ footer {
 		<p>Uncover the exquisite arts and handicrafts that have been an
 			integral part of Indian culture.</p>
 	</header>
-	<button onclick="window.location.href='/explore-content.html'"
+	<button onclick="window.location.href='/explore-content.jsp'"
 		class="card-btn">Back</button>
 
 	<main class="container">

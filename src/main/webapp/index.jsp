@@ -138,7 +138,7 @@ h1 {
 
 		<!-- Start Your Journey Button -->
 		<button class="center-button"
-			onclick="window.location.href='/SignIn'">Start Your
+			onclick="window.location.href='/SignIn.jsp'">Start Your
 			Journey</button>
 
 		<div class="content">

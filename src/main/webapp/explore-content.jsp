@@ -108,49 +108,49 @@ body {
 	</div>
 
 	<div class="container">
-		<div class="card" onclick="fetchContent('tourism')">
+		<div class="card" onclick="fetchContent('tourism.jsp')">
 			<h4>Beautiful Tourism Places</h4>
 			<p>Discover India’s most iconic tourist destinations like Taj
 				Mahal, Jaipur’s forts, and more!</p>
 			<a href="tourism" class="btn">Explore</a>
 		</div>
 
-		<div class="card" onclick="fetchContent('food')">
+		<div class="card" onclick="fetchContent('food.jsp')">
 			<h4>Food of India</h4>
 			<p>Explore the diverse and delicious cuisines of India, from
 				street food to royal feasts.</p>
 			<a href="food" class="btn">Explore</a>
 		</div>
 
-		<div class="card" onclick="fetchContent('lifestyle-details')">
+		<div class="card" onclick="fetchContent('lifestyle-details.jsp')">
 			<h4>Indian Lifestyle</h4>
 			<p>Learn about the vibrant and dynamic lifestyles across
 				different states of India.</p>
 			<a href="lifestyle-details" class="btn">Explore</a>
 		</div>
 
-		<div class="card" onclick="fetchContent('traditions')">
+		<div class="card" onclick="fetchContent('traditions.jsp')">
 			<h4>Spirituals Of India</h4>
 			<p>Dive into India’s rich traditions, cultural practices, and
 				diverse heritage.</p>
 			<a href="traditions" class="btn">Explore</a>
 		</div>
 
-		<div class="card" onclick="fetchContent('festivals')">
+		<div class="card" onclick="fetchContent('festivals.jsp')">
 			<h4>Festivals of India</h4>
 			<p>Experience the joy and cultural significance of India's
 				numerous festivals.</p>
 			<a href="festivals" class="btn">Explore</a>
 		</div>
 
-		<div class="card" onclick="fetchContent('arts')">
+		<div class="card" onclick="fetchContent('arts.jsp')">
 			<h4>Indian Arts and Crafts</h4>
 			<p>Uncover the exquisite arts and handicrafts that have been an
 				integral part of Indian culture.</p>
 			<a href="arts" class="btn">Explore</a>
 		</div>
 	</div>
-	<button onclick="window.location.href='/visitor-dashboard'"
+	<button onclick="window.location.href='/visitor-dashboard.jsp'"
 		class="card-btn">Back</button>
 </body>
 </html>

@@ -100,7 +100,7 @@ footer {
 
 
 	</header>
-	<button onclick="window.location.href='/explore-content'"
+	<button onclick="window.location.href='/explore-content.jsp'"
 		class="card-btn">Back</button>
 	<main>
 		<section class="cuisine">

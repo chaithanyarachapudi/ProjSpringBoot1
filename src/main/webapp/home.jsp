@@ -106,7 +106,7 @@ h1 {
 	<!-- Navigation Bar -->
 	<header class="bg-danger">
 		<nav class="navbar navbar-expand-lg navbar-dark container">
-			<a class="navbar-brand" href="/home">Incredible India</a>
+			<a class="navbar-brand" href="/home.jsp">Incredible India</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false"
@@ -116,11 +116,11 @@ h1 {
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item"><a class="nav-link text-light"
-						href="#home">Home</a></li>
+						href="/home.jsp">Home</a></li>
 					<li class="nav-item"><a class="nav-link text-light"
-						href="/SignIn">Sign In</a></li>
+						href="/SignIn.jsp">Sign In</a></li>
 					<li class="nav-item"><a class="nav-link text-light"
-						href="/SignUp">Sign Up</a></li>
+						href="/SignUp.jsp">Sign Up</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -138,7 +138,7 @@ h1 {
 
 		<!-- Start Your Journey Button -->
 		<button class="center-button"
-			onclick="window.location.href='/SignIn'">Start Your
+			onclick="window.location.href='/SignIn.jsp'">Start Your
 			Journey</button>
 
 		<div class="content">

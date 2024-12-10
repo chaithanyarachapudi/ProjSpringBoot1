@@ -105,7 +105,7 @@ footer {
 		<p>Experience the joy and cultural significance of India's
 			numerous festivals.</p>
 	</header>
-	<button onclick="window.location.href='/explore-content'"
+	<button onclick="window.location.href='/explore-content.jsp'"
 		class="card-btn">Back</button>
 	<main class="container mt-4">
 		<section>

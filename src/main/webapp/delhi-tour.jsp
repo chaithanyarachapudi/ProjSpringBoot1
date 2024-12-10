@@ -60,7 +60,7 @@ iframe {
 <body>
 
 	<!-- Back Button -->
-	<a href="virtual-tour" class="back-button">Back to Virtual
+	<a href="virtual-tour.jsp" class="back-button">Back to Virtual
 		Tours</a>
 
 	<!-- A-Frame scene -->
