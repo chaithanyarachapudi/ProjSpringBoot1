@@ -215,7 +215,7 @@ body {
         
         // Creating the data object to send
         var data = JSON.stringify({ username: username, password: password });
-        var url = "http://localhost:8080/user/validate";
+        var url = "https://s35team15.up.railway.app/user/validate";
         
         // Call API with the data and handle response
         callApi("POST", url, data, function(response) {

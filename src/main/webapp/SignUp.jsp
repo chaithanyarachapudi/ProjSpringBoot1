@@ -180,7 +180,7 @@ function register() {
         email: document.getElementById("email").value
     });
     
-    var url = "http://localhost:8080/user/register";
+    var url = "https://s35team15.up.railway.app/user/register";
     callApi("POST", url, data, function(response) {
         handleRegisterResponse(response);
     });

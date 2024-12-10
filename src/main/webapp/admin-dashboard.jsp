@@ -173,7 +173,7 @@ body {
     async function loadComments() {
         const commentLog = document.getElementById('commentLog');
         try {
-            const response = await fetch("http://localhost:8080/comments");
+            const response = await fetch("https://s35team15.up.railway.app/comments");
             const commentList = await response.json();
 
             commentList.forEach(comment => {

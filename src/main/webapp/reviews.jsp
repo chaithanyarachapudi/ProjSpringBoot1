@@ -104,7 +104,7 @@
                 answers.push({ question, answer });
             });
 
-            const response = await fetch("http://localhost:8080/api/reviews/add", {
+            const response = await fetch("https://s35team15.up.railway.app/api/reviews/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -121,7 +121,7 @@
         }
 
         async function loadReviews() {
-            const response = await fetch("http://localhost:8080/api/reviews/all");
+            const response = await fetch("https://s35team15.up.railway.app/api/reviews/all");
             const reviews = await response.json();
             const reviewSection = document.getElementById("reviews");
             reviewSection.innerHTML = "";
