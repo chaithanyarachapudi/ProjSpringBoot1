@@ -151,10 +151,10 @@ body {
 	<div class="container">
 		<div class="sidebar">
 			<h2>Menu</h2>
-			<a href="/explore-content.html">Explore Content</a> <a
-				href="/virtual-tour.html">Virtual Tours</a> <a
+			<a href="/explore-content.jsp">Explore Content</a> <a
+				href="/virtual-tour.jsp">Virtual Tours</a> <a
 				href="#culturalDiscussions">Cultural Discussions</a> <a
-				href="/home.html">Logout</a>
+				href="/home.jsp">Logout</a>
 		</div>
 
 		<div class="content">
@@ -165,7 +165,7 @@ body {
 				<p>Discover articles, videos, and information about Indian
 					culture and heritage.</p>
 				<button class="btn"
-					onclick="window.location.href='explore-content';">View
+					onclick="window.location.href='explore-content.jsp';">View
 					Content</button>
 			</div>
 
@@ -175,7 +175,7 @@ body {
 				<p>Join guided tours to explore famous historical sites
 					virtually.</p>
 				<button class="btn"
-					onclick="window.location.href='virtual-tour';">Join a
+					onclick="window.location.href='virtual-tour.jsp';">Join a
 					Virtual Tour</button>
 			</div>
 
@@ -203,7 +203,7 @@ body {
 			        <!-- Submit Button -->
 			        <button class="btn" onclick="submitComment()">Submit</button>
 			    </div>
-			    <button class="btn" onclick="window.location.href='/reviews'">Reviews</button>
+			    <button class="btn" onclick="window.location.href='/reviews.jsp'">Reviews</button>
 			</div>
 		</div>
 	</div>
