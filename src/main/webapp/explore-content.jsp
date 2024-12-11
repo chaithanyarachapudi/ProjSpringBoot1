@@ -145,7 +145,7 @@ body {
 
 		<div class="card" onclick="fetchContent('arts.jsp')">
 			<h4>Indian Arts and Crafts</h4>
-			<p>Uncover the exquisite arts and handicrafts that have been an
+			<p>Uncover the exquisite arts and handycrafts that have been an
 				integral part of Indian culture.</p>
 			<a href="arts" class="btn">Explore</a>
 		</div>
@@ -158,7 +158,7 @@ body {
 function fetchContent(category) {
     const apiKey = 'AIzaSyDlwIQQqwCiWvHJJwmdxgWwlINZ8Ox_6YM';
     
-    fetch(`http://localhost:8080/api/${category}`, {
+    fetch(`https://s35team15.up.railway.app/api/${category}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
