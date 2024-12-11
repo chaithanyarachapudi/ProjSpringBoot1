@@ -168,7 +168,7 @@
             .catch(error => alert("Error fetching users: " + error));
         }
 
-        function deleteUser(userId) {
+        function deleteUser(username) {
             fetch(`https://s35team15.up.railway.app/user/${userId}`, { method: "DELETE" })
                 .then(response => {
                     if (response.ok) {
