@@ -146,9 +146,9 @@
             window.history.back();
         }
         function fetchUsers() {
-            fetch("https://s35team15.up.railway.app/user/users")
+            fetch("https://s35team15.up.railway.app/user/user")
             .then(response => response.json())
-            .then(users => {
+            .then(user => {
                 const userTableBody = document.getElementById("userTableBody");
                 userTableBody.innerHTML = "";
                 users.forEach(user => {
@@ -165,11 +165,11 @@
                     userTableBody.innerHTML += row;
                 });
             })
-            .catch(error => alert("Error fetching users: " + error));
+            .catch(error => alert("Error fetching user: " + error));
         }
 
         function deleteUser(username) {
-            fetch(`https://s35team15.up.railway.app/user/${userId}`, { method: "DELETE" })
+            fetch(`https://s35team15.up.railway.app/user/${username}`, { method: "DELETE" })
                 .then(response => {
                     if (response.ok) {
                         alert("User deleted.");
