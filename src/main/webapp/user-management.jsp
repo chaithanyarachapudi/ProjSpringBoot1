@@ -146,9 +146,9 @@
             window.history.back();
         }
         function fetchUsers() {
-            fetch("https://s35team15.up.railway.app/user/user")
+            fetch("https://s35team15.up.railway.app/user/users")
             .then(response => response.json())
-            .then(user => {
+            .then(users => {
                 const userTableBody = document.getElementById("userTableBody");
                 userTableBody.innerHTML = "";
                 users.forEach(user => {
