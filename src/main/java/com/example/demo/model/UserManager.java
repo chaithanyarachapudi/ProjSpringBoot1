@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.repository.UserRepository;
@@ -20,5 +22,8 @@ public class UserManager {
     public String userValidate(User user) {
         return userRepository.validate(user.getUsername(), user.getPassword()).equals("1")
             ? "Authorized User" : "Unauthorized User";
+    }
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 }

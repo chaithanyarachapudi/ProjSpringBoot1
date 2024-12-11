@@ -1,6 +1,9 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.model.User;
@@ -20,5 +23,11 @@ public class UserController {
     @PostMapping("/validate")
     public String validate(@RequestBody User user) {
         return userManager.userValidate(user);
+    }
+    
+   
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> getAllUsers() {
+        return ResponseEntity.ok(userManager.getAllUsers());
     }
 }

@@ -145,70 +145,45 @@
         function goBack() {
             window.history.back();
         }
-
-        // Sample data for users (for demonstration purposes)
-        const users = [
-            { username: "john_doe", email: "john@example.com", role: "Cultural Enthusiast" },
-            { username: "jane_smith", email: "jane@example.com", role: "Content Creator" },
-            { username: "admin_user", email: "admin@example.com", role: "Admin" },
-        ];
-
-        // Function to render user table
-        function renderUserTable() {
-            const userTableBody = document.getElementById('userTableBody');
-            userTableBody.innerHTML = ''; // Clear existing rows
-            users.forEach((user, index) => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${user.username}</td>
-                    <td>${user.email}</td>
-                    <td>
-                        <select onchange="updateUserRole(${index}, this.value)">
-                            <option value="Cultural Enthusiast" ${user.role === 'Cultural Enthusiast' ? 'selected' : ''}>Cultural Enthusiast</option>
-                            <option value="Content Creator" ${user.role === 'Content Creator' ? 'selected' : ''}>Content Creator</option>
-                            <option value="Tour Guide" ${user.role === 'Tour Guide' ? 'selected' : ''}>Tour Guide</option>
-                            <option value="Admin" ${user.role === 'Admin' ? 'selected' : ''}>Admin</option>
-                        </select>
-                    </td>
-                    <td>
-                        <div class="action-buttons">
-                            <button class="btn-edit" onclick="editUser(${index})">Edit</button>
-                            <button class="btn-delete" onclick="deleteUser(${index})">Delete</button>
-                        </div>
-                    </td>
-                `;
-                userTableBody.appendChild(row);
-            });
+        function fetchUsers() {
+            fetch("https://s35team15.up.railway.app/user/users")
+            .then(response => response.json())
+            .then(users => {
+                const userTableBody = document.getElementById("userTableBody");
+                userTableBody.innerHTML = "";
+                users.forEach(user => {
+                    const row = `
+                        <tr>
+                            <td>${user.username}</td>
+                            <td>${user.email}</td>
+                            <td>${user.mobile}</td>
+                            <td>
+                                <button onclick="deleteUser(${user.username})">Delete</button>
+                            </td>
+                        </tr>
+                    `;
+                    userTableBody.innerHTML += row;
+                });
+            })
+            .catch(error => alert("Error fetching users: " + error));
         }
 
-        // Function to update user role
-        function updateUserRole(index, newRole) {
-            users[index].role = newRole;
-            alert(`Role updated to "${newRole}" for user: ${users[index].username}`);
+        function deleteUser(userId) {
+            fetch(`https://s35team15.up.railway.app/user/${userId}`, { method: "DELETE" })
+                .then(response => {
+                    if (response.ok) {
+                        alert("User deleted.");
+                        fetchUsers();
+                    } else {
+                        alert("Error deleting user.");
+                    }
+                })
+                .catch(error => alert("Error: " + error));
         }
 
-        // Function to edit user
-        function editUser(index) {
-            const newEmail = prompt('Enter new email for ' + users[index].username + ':', users[index].email);
-            if (newEmail) {
-                users[index].email = newEmail;
-                renderUserTable();
-                alert('User email updated.');
-            }
-        }
-
-        // Function to delete user
-        function deleteUser(index) {
-            if (confirm('Are you sure you want to delete this user?')) {
-                users.splice(index, 1);
-                renderUserTable();
-                alert('User deleted.');
-            }
-        }
-
-        // Initialize user table on page load
-        renderUserTable();
+        fetchUsers();
     </script>
+
 
 </body>
 </html>
