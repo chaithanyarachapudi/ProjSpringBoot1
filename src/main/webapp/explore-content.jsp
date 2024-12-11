@@ -151,7 +151,6 @@ body {
 		</div>
 	</div>
 	<div>
-	
 	 <a href="visitor-dashboard.jsp" class="card-btn">Back</a>
 	</div>
 </body>
