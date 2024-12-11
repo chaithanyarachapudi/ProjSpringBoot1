@@ -227,7 +227,7 @@ body {
     function getResponse(response, username, password) {
         if (response === "Authorized User") {
             // Check if the credentials match admin
-            if (username === "admin" && password === "chaithu") {
+            if (username === "admin" && password === "admin") {
                 window.location.href = "/admin-dashboard.jsp";
             } else {
                 window.location.href = "/visitor-dashboard.jsp";
