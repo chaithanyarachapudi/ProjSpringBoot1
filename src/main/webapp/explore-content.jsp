@@ -150,8 +150,10 @@ body {
 			<a href="arts.jsp" class="btn">Explore</a>
 		</div>
 	</div>
-	<button onclick="window.location.href='/visitor-dashboard.jsp'"
-		class="card-btn">Back</button>
+	<div>
+	
+	 <a href="visitor-dashboard.jsp" class="card-btn">Back</a>
+	</div>
 </body>
 </html>
 <script>
